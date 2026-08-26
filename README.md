@@ -10,6 +10,7 @@ Read it in order. Each folder is one module and has its own README with a readin
 
 | Module | What you learn |
 |---|---|
+| [00 - What We Sell](00-what-we-sell/) | The offer: what Wing Digital does, who we call, and how to talk about it |
 | [01 - Foundations](01-foundations/) | The mindset, the anatomy of a call, the math, and the legal basics |
 | [02 - Prospecting](02-prospecting/) | Building a free lead list, 2-minute research, running a call sheet, gatekeepers |
 | [03 - Scripts](03-scripts/) | Openers, value statements, a full annotated script, discovery, voicemail |
@@ -18,6 +19,7 @@ Read it in order. Each folder is one module and has its own README with a readin
 
 ## The short version
 
+0. Learn the offer cold: the one-liner, the four services, the honesty rules (Module 0).
 1. Build a list of 100 local businesses (Module 2).
 2. Learn one opener and one value statement cold (Module 3).
 3. Drill objections until responses are automatic (Modules 4 and 5).
