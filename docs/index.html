@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Calling from Zero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b23; --panel2:#1d242f; --ink:#eef2f7; --dim:#9aa7b8;
+    --accent:#4fc3f7; --accent2:#ffb74d; --good:#81c784; --bad:#e57373; --line:#2a3342;
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif}
+  section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:88px 24px 64px;max-width:960px;margin:0 auto}
+  .kicker{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
+  h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;line-height:1.1}
+  h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;margin-bottom:22px;line-height:1.15}
+  h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
+  p.lead{font-size:1.15rem;color:var(--dim);margin-top:18px;max-width:640px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:26px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card p{color:var(--dim);font-size:.95rem}
+  .card .say{margin-top:12px;padding:12px 14px;background:var(--panel2);border-left:3px solid var(--accent);border-radius:8px;font-size:.92rem;color:var(--ink);font-style:italic}
+  .big-quote{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--radius);padding:26px 28px;font-size:1.25rem;margin-top:26px;font-style:italic}
+  .rule-list{list-style:none;margin-top:22px;display:grid;gap:12px}
+  .rule-list li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;gap:14px;align-items:baseline}
+  .rule-list .n{color:var(--accent2);font-family:'Sora';font-weight:800;font-size:1.1rem;min-width:1.4em}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  @media(max-width:700px){.split{grid-template-columns:1fr}}
+  .do,.dont{border-radius:var(--radius);padding:22px;border:1px solid var(--line)}
+  .do{background:rgba(129,199,132,.07)} .dont{background:rgba(229,115,115,.07)}
+  .do h3{color:var(--good)} .dont h3{color:var(--bad)}
+  .do ul,.dont ul{margin-top:10px;margin-left:18px;color:var(--dim);font-size:.95rem}
+  .do li,.dont li{margin-bottom:8px}
+  .funnel{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;align-items:center}
+  .fstep{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-align:center;flex:1;min-width:118px}
+  .fstep .num{font-family:'Sora';font-weight:800;font-size:1.6rem;color:var(--accent)}
+  .fstep .lbl{font-size:.8rem;color:var(--dim)}
+  .arrow{color:var(--dim);font-size:1.2rem}
+  .stages{counter-reset:st;display:grid;gap:12px;margin-top:26px}
+  .stage{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;position:relative}
+  .stage h3{color:var(--accent)}
+  .stage p{color:var(--dim);font-size:.95rem}
+  .navdots{position:fixed;top:0;left:0;right:0;background:rgba(14,17,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10;display:flex;gap:4px;overflow-x:auto;padding:10px 16px}
+  .navdots a{color:var(--dim);text-decoration:none;font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:999px;white-space:nowrap}
+  .navdots a:hover{color:var(--ink);background:var(--panel2)}
+  .qbox{margin-top:34px;background:linear-gradient(135deg,rgba(79,195,247,.12),rgba(255,183,77,.10));border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px}
+  .qbox h3{color:var(--accent2)}
+  .qbox p{color:var(--dim);font-size:.95rem}
+  .footer-note{color:var(--dim);font-size:.85rem;margin-top:40px}
+  .tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.78rem;color:var(--dim);margin:3px 4px 0 0}
+  a.repo{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<nav class="navdots">
+  <a href="#top">Start</a>
+  <a href="#offer">What We Sell</a>
+  <a href="#who">Who We Call</a>
+  <a href="#mindset">Mindset</a>
+  <a href="#anatomy">The Call</a>
+  <a href="#script">The Script</a>
+  <a href="#objections">Objections</a>
+  <a href="#booking">Booking</a>
+  <a href="#rules">Rules</a>
+  <a href="#plan">Your 30 Days</a>
+  <a href="#questions">Questions</a>
+</nav>
+
+<section id="top">
+  <div class="kicker">Wing Digital caller training</div>
+  <h1>Cold Calling<br>from Zero</h1>
+  <p class="lead">Everything you need to understand before your first dial. Read it top to bottom, write down every question you have, and we'll go through them together. You are not expected to know how anything is built. That part gets taught in person.</p>
+  <p class="footer-note">Scroll down, or use the menu at the top. Full written course: <a class="repo" href="https://github.com/wingdigital26-maker/cold-calling-course">the GitHub repo</a>.</p>
+</section>
+
+<section id="offer">
+  <div class="kicker">Module 0</div>
+  <h2>What we sell</h2>
+  <div class="big-quote">"We help local home-service businesses get found on Google and turn that attention into booked jobs."</div>
+  <div class="cards">
+    <div class="card"><h3>Websites</h3><p>We build or rebuild their site. When a homeowner checks two companies before calling, the better website wins the trust.</p><div class="say">"What people find when they look you up is deciding whether you get the job."</div></div>
+    <div class="card"><h3>SEO &amp; content</h3><p>We make them show up on Google: service pages, city pages, regular blog posts. Page one gets the calls. Everyone else gets nothing.</p><div class="say">"Right now your competitors show up ahead of you. That's calls going to them."</div></div>
+    <div class="card"><h3>Content engine</h3><p>After the fix, we keep publishing weekly, automatically. They do nothing and keep climbing.</p><div class="say">"Every week your site gets new content while your competitors stand still."</div></div>
+    <div class="card"><h3>Reviews &amp; reputation</h3><p>More Google reviews from real happy customers. A company with 8 reviews loses to one with 200, even doing better work.</p><div class="say">"Your work isn't the problem. Your visibility is."</div></div>
+  </div>
+  <div class="qbox"><h3>What we are NOT</h3><p>Not a lead-selling service like Angi. No ranking guarantees, no promised lead counts, no prices quoted on the phone. Ever. Pricing and specifics happen on the 15-minute call with Jack.</p></div>
+</section>
+
+<section id="who">
+  <div class="kicker">Module 0</div>
+  <h2>Who we call</h2>
+  <p class="lead">Local home-service businesses where the owner answers the phone and makes the decisions.</p>
+  <div>
+    <span class="tag">Roofing</span><span class="tag">HVAC</span><span class="tag">Plumbing</span><span class="tag">Electrical</span><span class="tag">Landscaping</span><span class="tag">Junk removal</span><span class="tag">Pool service</span><span class="tag">Pest control</span><span class="tag">Remodeling</span><span class="tag">General contractors</span>
+  </div>
+  <div class="split">
+    <div class="do"><h3>Great prospect</h3><ul>
+      <li>Few Google reviews (roughly 0 to 15)</li>
+      <li>No website, or an old broken one</li>
+      <li>Established business, stale online presence</li>
+      <li>Good work, invisible on Google</li>
+    </ul></div>
+    <div class="dont"><h3>Skip or go easy</h3><ul>
+      <li>Franchises with a marketing department</li>
+      <li>Businesses that already look great online</li>
+      <li>Anyone on the Do-Not-Call registry or who asks not to be called. Log it, honor it, done.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="mindset">
+  <div class="kicker">Module 1</div>
+  <h2>The mindset</h2>
+  <p class="lead">Cold calling is a numbers game played with a good attitude. Rejection is not failure. It is the cost of finding the people who need us.</p>
+  <ul class="rule-list">
+    <li><span class="n">1</span><span>Most dials don't even connect. Of the ones that do, most say no. That is normal for everyone, including the best callers alive.</span></li>
+    <li><span class="n">2</span><span>Rough ballpark: a beginner books one meeting per 100 to 300 dials. It gets much better with reps. Do not judge yourself on any single call.</span></li>
+    <li><span class="n">3</span><span>Your energy is audible. Stand up, smile while you talk, keep a steady pace. The prospect hears your posture.</span></li>
+    <li><span class="n">4</span><span>Detach from the outcome of each call. Attach to the number of dials. Dials are the only thing you fully control.</span></li>
+  </ul>
+  <div class="funnel">
+    <div class="fstep"><div class="num">500</div><div class="lbl">dials</div></div><div class="arrow">&rarr;</div>
+    <div class="fstep"><div class="num">100</div><div class="lbl">connects</div></div><div class="arrow">&rarr;</div>
+    <div class="fstep"><div class="num">30</div><div class="lbl">conversations</div></div><div class="arrow">&rarr;</div>
+    <div class="fstep"><div class="num">6</div><div class="lbl">meetings booked</div></div><div class="arrow">&rarr;</div>
+    <div class="fstep"><div class="num">3</div><div class="lbl">meetings held</div></div>
+  </div>
+  <p class="footer-note">Example funnel with illustrative rates. Your real numbers get tracked from day one, and your real numbers are the only ones that matter.</p>
+</section>
+
+<section id="anatomy">
+  <div class="kicker">Module 1</div>
+  <h2>Anatomy of a cold call</h2>
+  <p class="lead">Every good cold call has the same five beats. The first ten seconds decide whether you get the rest.</p>
+  <div class="stages">
+    <div class="stage"><h3>1. Opener</h3><p>Say who you are, honestly, and ask for a moment. No tricks, no pretending you've talked before.</p></div>
+    <div class="stage"><h3>2. Reason for the call</h3><p>One specific thing you noticed about THEIR business. This is why research matters.</p></div>
+    <div class="stage"><h3>3. Value in one sentence</h3><p>The problem they feel, the outcome we deliver. Not a lecture about SEO.</p></div>
+    <div class="stage"><h3>4. One good question</h3><p>Get them talking about their situation. Listen twice as much as you talk.</p></div>
+    <div class="stage"><h3>5. Ask for the meeting</h3><p>Small ask: 15 minutes with Jack. Offer two concrete times. That's the whole goal.</p></div>
+  </div>
+</section>
+
+<section id="script">
+  <div class="kicker">Module 3</div>
+  <h2>The script, condensed</h2>
+  <div class="big-quote">"Hi [NAME], this is [YOUR NAME] with [YOUR COMPANY]. I'll be straight with you, this is a cold call, but I promise it's a quick one. Have you got 30 seconds?"</div>
+  <p class="lead">Then the reason: something real you saw. Their review count. Their site on a phone. How they rank in their own city.</p>
+  <div class="cards">
+    <div class="card"><h3>The 30-second pitch</h3><div class="say">"We're a marketing company that works with [TRADE] businesses. When someone in [CITY] searches for what you do, we make sure you show up, look better than the other guys, and get the call. I can't tell you what you need over the phone. That's the 15 minutes with Jack."</div></div>
+    <div class="card"><h3>The voicemail (under 20 seconds)</h3><div class="say">"Hey [NAME], this is [YOUR NAME] with [YOUR COMPANY]. I noticed something about how [COMPANY] shows up when people search for a [TRADE]. Nothing's on fire, but it's costing you calls. I'll try you again [DAY], or catch me at [YOUR NUMBER]. Talk soon."</div></div>
+  </div>
+  <div class="qbox"><h3>Gatekeepers</h3><p>Be pleasant and direct: "Hi, this is [YOUR NAME] from [YOUR COMPANY]. Is the owner around? It's about the company's website." Never lie to a gatekeeper. Never pretend to be someone you're not.</p></div>
+</section>
+
+<section id="objections">
+  <div class="kicker">Module 4</div>
+  <h2>Objections are reflexes, not answers</h2>
+  <p class="lead">The pattern for every objection: acknowledge it, clarify what's behind it, reframe once, ask again. One loop, maybe two. Never three.</p>
+  <div class="cards">
+    <div class="card"><h3>"Not interested"</h3><p>Usually means "I don't want to be sold right now."</p><div class="say">"Totally fair, I called out of nowhere. Can I ask one thing before I let you go: when someone searches [TRADE] in [CITY], do you know where you show up?"</div></div>
+    <div class="card"><h3>"Send me an email"</h3><p>Usually a polite brush-off.</p><div class="say">"Happy to. So I send something useful instead of junk: is the website or getting found on Google the bigger headache right now?"</div></div>
+    <div class="card"><h3>"How much is it?"</h3><p>Real interest, wrong moment.</p><div class="say">"Honest answer: it depends on what your site and your Google presence actually need. That's literally what the 15 minutes is for. Might be less than you think."</div></div>
+    <div class="card"><h3>"Too busy"</h3><p>Probably true. They're on a roof.</p><div class="say">"That's exactly why I'll be quick. Busy season is the best time to fix what brings the next season's jobs. Fifteen minutes, [DAY] or [DAY]?"</div></div>
+  </div>
+  <p class="footer-note">All ten common objections, each with two full word-for-word responses, are in Module 4 of the written course.</p>
+</section>
+
+<section id="booking">
+  <div class="kicker">Module 4</div>
+  <h2>Booking the meeting</h2>
+  <ul class="rule-list">
+    <li><span class="n">1</span><span>Keep the ask small. Fifteen minutes, that's it.</span></li>
+    <li><span class="n">2</span><span>Offer two options, not an open question: "Tuesday morning or Wednesday afternoon?"</span></li>
+    <li><span class="n">3</span><span>Send the calendar invite before you dial the next number. Not at the end of the day. Now.</span></li>
+    <li><span class="n">4</span><span>Confirm same-day with a quick text or email. This is the biggest no-show killer we have.</span></li>
+    <li><span class="n">5</span><span>A real no is a real no. End gracefully, leave the door open, move on. Burned bridges cost referrals.</span></li>
+  </ul>
+</section>
+
+<section id="rules">
+  <div class="kicker">Hard rules</div>
+  <h2>The honesty rules</h2>
+  <p class="lead">These are not suggestions. Breaking them gets meetings that fall apart and a reputation that follows us around town.</p>
+  <div class="split">
+    <div class="dont"><h3>Never</h3><ul>
+      <li>Quote a price. Not a number, not a range, not "probably around".</li>
+      <li>Promise rankings or lead counts.</li>
+      <li>Fake knowledge. "Good question, Jack covers that on the call."</li>
+      <li>Claim a referral, a callback, or a past conversation that didn't happen.</li>
+      <li>Trash their current setup beyond what you actually saw.</li>
+      <li>Call anyone who asked not to be called.</li>
+    </ul></div>
+    <div class="do"><h3>Always</h3><ul>
+      <li>Say who you are and where you're calling from.</li>
+      <li>Respect calling hours (8am to 9pm their time, and business hours in practice).</li>
+      <li>Log every call outcome on the call sheet.</li>
+      <li>Sell the 15-minute conversation, not the service.</li>
+      <li>Let them talk twice as much as you do.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="kicker">Module 5</div>
+  <h2>Your first 30 days</h2>
+  <div class="stages">
+    <div class="stage"><h3>Week 1: Learn and drill</h3><p>Read the full course. Read the scripts out loud daily. Roleplay with an AI chatbot using the prompts in Module 5. Zero real dials yet.</p></div>
+    <div class="stage"><h3>Week 2: First 50 dials</h3><p>Ten dials a day on real prospects. The goal is reps and comfort, not bookings. Log everything.</p></div>
+    <div class="stage"><h3>Week 3: Volume</h3><p>Twenty dials a day. Weekly review of your numbers. Do not touch the script yet; you don't have enough data.</p></div>
+    <div class="stage"><h3>Week 4: Refine and settle</h3><p>Twenty-five a day, then design your permanent daily block: 60 to 90 minutes, 20 to 30 dials, every working day.</p></div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="kicker">Last step</div>
+  <h2>Now: your questions</h2>
+  <p class="lead">You just took in a lot. Before we talk, write down every question you have, big or small. Especially the ones that feel dumb. Those are usually the important ones.</p>
+  <div class="cards">
+    <div class="card"><h3>Good questions to bring</h3><p>Anything about what to say, what we sell, what a specific objection means, or what happens after a meeting gets booked.</p></div>
+    <div class="card"><h3>Don't worry about</h3><p>How the websites, SEO, or systems are actually built and run. That gets taught in person, hands-on, after you're comfortable on the phone.</p></div>
+  </div>
+  <div class="qbox"><h3>Want the full detail?</h3><p>This page is the condensed version. Every module here has a full written chapter with complete scripts, all ten objections, tracking templates, and drills: <a class="repo" href="https://github.com/wingdigital26-maker/cold-calling-course">github.com/wingdigital26-maker/cold-calling-course</a></p></div>
+  <p class="footer-note">Wing Digital caller training. Questions go to Jack.</p>
+</section>
+
+</body>
+</html>
