@@ -16,14 +16,14 @@ One exception: if your research found something specific and genuinely useful (t
 
 Time yourself. Past 20 seconds, people skip.
 
-> "Hey [NAME], this is [YOUR NAME] with [YOUR COMPANY]. I work with [TRADE] companies around [CITY] and I noticed something about how [COMPANY] shows up when people search for a [TRADE] there. Nothing's on fire, but it's probably costing you calls. I'll try you again [DAY], or you can catch me at [YOUR NUMBER]. Again, that's [YOUR NAME], [YOUR NUMBER]. Talk soon."
+> "Hey [NAME], this is [YOUR NAME] with [YOUR COMPANY]. I noticed something about how [COMPANY] shows up when people search for a [TRADE]. Nothing's on fire, but it's costing you calls. I'll try you again [DAY], or catch me at [YOUR NUMBER]. Talk soon."
 
 Why each piece is there:
 
 - **"I noticed something about [COMPANY]"** creates a specific open loop. A vague "I'd love to chat about your marketing" closes itself, deleted. A specific unanswered "noticed something" itches.
 - **"Nothing's on fire"** keeps it honest. Fake-urgency voicemails ("it's important that you call me back") are a scam pattern and owners know it.
 - **"I'll try you again [DAY]"** is the actual point. You're not requesting a callback, you're announcing the next attempt, so when it comes, it's expected instead of annoying.
-- **Number twice, slowly.** Nobody replays a voicemail to catch a mumbled number. Say it at half the speed that feels natural.
+- **Number once, slowly.** Nobody replays a voicemail to catch a mumbled number. Say it at half the speed that feels natural, and you only need it once.
 
 Slow down overall. A rushed voicemail sounds like every other rushed sales voicemail.
 

@@ -21,7 +21,7 @@ Read it in order. Each folder is one module and has its own README with a readin
 1. Build a list of 100 local businesses (Module 2).
 2. Learn one opener and one value statement cold (Module 3).
 3. Drill objections until responses are automatic (Modules 4 and 5).
-4. Dial 30-50 times a day, track everything, review weekly (Module 5).
+4. Work up to a daily call block of 20-30 dials, track everything, review weekly (Module 5). Scale higher if you have full days free.
 5. Do not rewrite your script until you have real sample size. Just dial.
 
 ## Ground rules baked into everything here

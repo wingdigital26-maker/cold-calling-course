@@ -33,7 +33,7 @@ While still on the phone:
 
 1. **Repeat it back.** "So that's Tuesday the 9th at 9:30, I'll call you at this number."
 2. **Get their email.** "What's the best email? I'll send a calendar invite so it's on your phone." Getting the email also quietly confirms they're serious.
-3. **Send the invite before you dial the next number.** Not at end of day. Now. Title it something they'll recognize: "Jack / Wing Digital, 15 min re: [Company] leads."
+3. **Send the invite before you dial the next number.** Not at end of day. Now. Title it something they'll recognize: "[Your Name] / [Your Company], 15 min re: [Company] leads."
 
 If they hesitate on giving an email, don't fight it. Confirm by text instead: "I'll text you the details right now so it's in your phone."
 

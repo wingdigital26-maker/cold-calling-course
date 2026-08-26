@@ -49,11 +49,11 @@ The pain is storm-chaser competition and feast-or-famine work. After a hail stor
 
 **HVAC:**
 The pain is seasonality and emergency-call competition. Summer AC failures and winter furnace failures are won by whoever the panicked homeowner finds first at 9pm.
-> "When somebody's AC dies in July, they grab their phone and call the first company they see. Right now that's not you, and every one of those calls is a $[X] repair or a full replacement going to someone else. I can change who they see first."
+> "When somebody's AC dies in July, they grab their phone and call the first company they see. Right now that's not you, and every one of those calls is a [DOLLAR AMOUNT] repair or a full replacement going to someone else. I can change who they see first."
 
 **Plumber:**
 The pain is emergency urgency plus reviews. A burst pipe means the homeowner calls whoever looks trustworthy in 30 seconds of panicked scrolling, and trustworthy means review count.
-> "You've got [N] Google reviews and [COMPETITOR] up the road has [N]. When someone's got water coming through the ceiling, they call the one with more stars. I help you close that gap and catch those emergency calls."
+> "You've got [THEIR REVIEW COUNT] Google reviews and [COMPETITOR] up the road has [COMPETITOR REVIEW COUNT]. When someone's got water coming through the ceiling, they call the one with more stars. I help you close that gap and catch those emergency calls."
 
 **Landscaper:**
 The pain is one-off jobs versus recurring contracts, and spring being decided in February.
@@ -66,7 +66,7 @@ Notice what changed in each: the problem and the moment of urgency. The formula 
 - One sentence to start, two max. If they want more, they'll ask. That's the goal: a value statement that earns a question.
 - Say it out loud 20 times before your first call. If your mouth trips on a word, change the word.
 - Use their vocabulary. Jobs, calls, crews, booked out. Not leads, funnels, conversions.
-- Fill in real numbers ([N] reviews, [COMPETITOR] name) before you dial. A value statement with their actual data in it is 10x the generic version.
+- Fill in real numbers (review counts, [COMPETITOR] name) before you dial. A value statement with their actual data in it is 10x the generic version.
 - No em dashes on paper and no jargon out loud. If you wouldn't say it to a guy in a truck at a gas station, don't say it on the phone.
 
 Next: [03-full-script-template.md](03-full-script-template.md) puts the opener and value statement into a complete call.

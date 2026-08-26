@@ -18,7 +18,7 @@ Also: a gatekeeper is a source, not just an obstacle. They can tell you the owne
 Adjust the wording to sound like you. The structure is what matters: pleasant, direct, specific.
 
 1. **The straightforward ask:**
-"Hi, this is Jack from Wing Digital. Is Mike around? It's about the company's website."
+"Hi, this is [YOUR NAME] from [YOUR COMPANY]. Is Mike around? It's about the company's website."
 
 Short, calm, uses the owner's name if you have it. Do not over-explain before being asked.
 

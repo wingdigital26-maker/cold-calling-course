@@ -46,7 +46,7 @@ Goal: roughly double the volume, tighten the feedback loop. Rough guidance: 20 t
 | 16 | Warmup. 20 dials, weighted toward the answer-times you found in week 2. Review 2 calls. |
 | 17 | Warmup. 20 dials. Evening: 1 gatekeeper roleplay if gatekeepers are eating you, otherwise tough prospect. |
 | 18 | Warmup. 20 dials. Review 2 calls. Update your flashcards with any new objection you have actually heard this week. |
-| 19 | Warmup. 20 dials. You are now past 150 total dials. Weekly review: full rollup, all five questions. |
+| 19 | Warmup. 20 dials. You are now at 150 total dials. Weekly review: full rollup, all five questions. |
 | 20-21 | Light day or rest. Compare your week 3 ratios to week 2. Pick ONE change for week 4 using the decision table in [04-tracking-and-kpis.md](04-tracking-and-kpis.md). Now, and only now, are you allowed to change the opener if the data says so. |
 
 ## Week 4: Refine and scale

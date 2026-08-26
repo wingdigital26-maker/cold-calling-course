@@ -64,14 +64,14 @@ Do NOT start pitching features. Interest means it's time to book, not time to ta
 Hesitation is not a no. It's fear of a sales pitch. Your job is to lower the stakes, not to push harder.
 
 **"We already work with somebody":**
-> "That's fair, and I'm not going to trash them, if it's working, keep it. Let me ask you this though: are you actually seeing more calls come in, or are you kind of taking it on faith? ... If you're even a little unsure, that's exactly what the 15 minutes is for. I'll show you where you stand right now, in plain numbers. Worst case you go back to your current guy with better questions."
+> "That's fair, and I'm not going to trash them, if it's working, keep it. Let me ask you this though: are you actually seeing more calls come in, or are you kind of taking it on faith? ... If you're even a little unsure, that's exactly what the 15 minutes is for. I'll show you where you stand right now, in plain numbers. Worst case you go back to your current guy with better questions. Does [DAY] or [DAY] work for those 15 minutes?"
 
-*Why: Refusing to trash the competitor builds trust instantly. The question "or are you taking it on faith" lands because most owners genuinely don't know what their marketing does. And "go back to your current guy with better questions" makes the meeting safe, it doesn't require leaving anyone.*
+*Why: Refusing to trash the competitor builds trust instantly. The question "or are you taking it on faith" lands because most owners genuinely don't know what their marketing does. And "go back to your current guy with better questions" makes the meeting safe, it doesn't require leaving anyone. Then ask for the booking anyway, two days offered, because lowering the stakes without asking books nothing.*
 
 **"Money's tight" / "Not in the budget":**
-> "Totally get it, and I'm not asking you to spend anything today. The 15-minute call costs you nothing, and if the math doesn't obviously work, I'll tell you that myself. I'd rather tell you no than take money that doesn't come back to you."
+> "Totally get it, and I'm not asking you to spend anything today. The 15-minute call costs you nothing, and if the math doesn't obviously work, I'll tell you that myself. I'd rather tell you no than take money that doesn't come back to you. Can you give me 15 minutes, [DAY] or [DAY]?"
 
-*Why: You separated the meeting from the money. "I'd rather tell you no" is disarming because salespeople never say it. Only say it if you mean it.*
+*Why: You separated the meeting from the money. "I'd rather tell you no" is disarming because salespeople never say it. Only say it if you mean it. And once the money is off the table, ask for the free meeting directly, with two days to pick from.*
 
 **"Just send me some info":**
 > "I can do that, but let me be honest, that email's going to die in your inbox and we both know it. How about this instead: 15 minutes, I show you what I'd send you anyway, but on a screen where you can ask questions. If it's junk, delete me like the email. [DAY] or [DAY]?"
@@ -79,9 +79,9 @@ Hesitation is not a no. It's fear of a sales pitch. Your job is to lower the sta
 *Why: "Send me info" is usually a polite brush-off. Naming that, with humor, either converts it into a real meeting or surfaces the real objection so you can deal with it. If they insist on the email, send a SHORT one and calendar a follow-up call for three days later.*
 
 **Hesitant but warming ("I mean... maybe, what would you even do?"):**
-> "Good question, and the honest answer is I don't fully know yet, because I'd want to look under the hood first. That's the point of the 15 minutes. But broadly: [ONE SENTENCE, e.g. 'get you showing up first when people in [CITY] search, and make the phone ring more']. Fair enough?"
+> "Good question, and the honest answer is I don't fully know yet, because I'd want to look under the hood first. That's the point of the 15 minutes. But broadly: [ONE SENTENCE, e.g. 'get you showing up first when people in [CITY] search, and make the phone ring more']. Fair enough? So let's do the 15 minutes and I'll show you specifics, [DAY] morning or [DAY] afternoon?"
 
-*Why: Refusing to give a canned answer proves you're not running a script on rails. One plain sentence satisfies the question without turning the call into a pitch.*
+*Why: Refusing to give a canned answer proves you're not running a script on rails. One plain sentence satisfies the question without turning the call into a pitch. Warming means it's time to book, so roll straight into the two-option ask instead of waiting for them to volunteer.*
 
 ### Branch C: Busy ("I'm on a roof right now" / "In the middle of something")
 

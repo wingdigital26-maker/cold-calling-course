@@ -34,7 +34,7 @@ A no today is not a no forever. Situations change: their agency drops the ball, 
 Concretely:
 
 - Log every no with a reason ("happy with current agency", "slow season, revisit spring") so future-you calls back with context.
-- If they were friendly, a single low-key follow-up months later is fine: "Hey Mike, Jack from Wing, we spoke back in March. Not selling anything today, just checking how the season's treating you." No pitch unless they open the door.
+- If they were friendly, a single low-key follow-up months later is fine: "Hey Mike, [YOUR NAME] from [YOUR COMPANY], we spoke back in March. Not selling anything today, just checking how the season's treating you." No pitch unless they open the door.
 - Never mark someone "dead" just because they said no once politely. Mark them "not now." Reserve "never call" for people who asked for it.
 
 ## Why burning bridges costs future referrals
